@@ -26,12 +26,12 @@ var mainState = {
         this.pipes = game.add.group();
         this.timer = game.time.events.loop(1500, this.addRowOfPipes, this);           
 
-        this.bird = game.add.sprite(100, 245, 'bird');
+        this.bird = game.add.sprite(100, 125, 'bird');
         game.physics.arcade.enable(this.bird);
         this.bird.body.gravity.y = 1500; 
 
         // New anchor position
-        this.bird.anchor.setTo(-0.2, 0.5); 
+        // this.bird.anchor.setTo(-0.2, 0.5); 
  
         var spaceKey = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
         spaceKey.onDown.add(this.jump, this); 
